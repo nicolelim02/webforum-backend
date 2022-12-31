@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :sessions
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show"
   post "/login", to: "sessions#create"
   get "/authorized", to: "sessions#show"
+  post "/posts/new", to: "posts#create"
 end
