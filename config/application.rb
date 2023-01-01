@@ -14,7 +14,7 @@ module WebforumBackend
         
         resource '*', 
           headers: :any, 
-          methods: [:get, :post, :delete, :put]
+          methods: [:get, :post, :delete, :patch]
       end
     end
     # Initialize configuration defaults for originally generated Rails version.

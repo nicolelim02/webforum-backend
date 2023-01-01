@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get "/authorized", to: "sessions#show"
   post "/posts/new", to: "posts#create"
   delete "/delete/:id", to: "posts#destroy"
+  patch "/update/:id", to: "posts#update"
 end

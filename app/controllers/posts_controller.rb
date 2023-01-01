@@ -30,6 +30,16 @@ class PostsController < ApplicationController
         @post.destroy
     end
 
+    def update
+        @post = Post.find(params[:id])
+
+        if @post.update(post_params)
+            render json: @post
+        else
+            render json: { error: "Unable to edit, please try again." }
+        end
+    end
+
     private
 
     def post_params
