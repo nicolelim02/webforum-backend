@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :posts
   resources :sessions
   resources :users
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   delete "/delete/:id", to: "posts#destroy"
   patch "/update/:id", to: "posts#update"
   delete "/logout", to: "sessions#destroy"
+  post "/comment/new", to: "comments#create"
 end
