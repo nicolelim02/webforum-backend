@@ -24,7 +24,8 @@ class ApplicationController < ActionController::API
     end
 
     def current_user
-        user ||= User.find_by(id: user_id)
+        @user ||= User.find_by(id: user_id)
+        # @user ||= User.find(session[:user_id]) || User.new
     end
 
     def logged_in?
